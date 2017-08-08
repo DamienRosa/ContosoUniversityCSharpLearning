@@ -137,6 +137,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\SchoolContext.cs" />
     <Compile Include="DAL\SchoolInitializer.cs" />
@@ -158,6 +159,14 @@
     <Compile Include="Migrations\201708071722453_ColumnFirstName1.cs" />
     <Compile Include="Migrations\201708071722453_ColumnFirstName1.Designer.cs">
       <DependentUpon>201708071722453_ColumnFirstName1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708081501164_ComplexDataModel.cs" />
+    <Compile Include="Migrations\201708081501164_ComplexDataModel.Designer.cs">
+      <DependentUpon>201708081501164_ComplexDataModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708081719181_ComplexData.cs" />
+    <Compile Include="Migrations\201708081719181_ComplexData.Designer.cs">
+      <DependentUpon>201708081719181_ComplexData.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
@@ -213,6 +222,11 @@
     <Content Include="Views\Student\Details.cshtml" />
     <Content Include="Views\Student\Edit.cshtml" />
     <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Courses\Create.cshtml" />
+    <Content Include="Views\Courses\Delete.cshtml" />
+    <Content Include="Views\Courses\Details.cshtml" />
+    <Content Include="Views\Courses\Edit.cshtml" />
+    <Content Include="Views\Courses\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -237,6 +251,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708071722453_ColumnFirstName1.resx">
       <DependentUpon>201708071722453_ColumnFirstName1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708081501164_ComplexDataModel.resx">
+      <DependentUpon>201708081501164_ComplexDataModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708081719181_ComplexData.resx">
+      <DependentUpon>201708081719181_ComplexData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
