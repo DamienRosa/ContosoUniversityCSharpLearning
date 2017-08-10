@@ -79,7 +79,7 @@
             {
                 selectedRow = "success";
             }
-            <tr class="@selectedRow">
+            <tr class="@selectedRow" valign="top">
                 <td>@Html.ActionLink("Select", "Index", new { courseID = item.CourseID })</td>
                 <td>@Html.DisplayFor(m => @item.CourseID)</td>
                 <td>@Html.DisplayFor(m => @item.Title)</td>

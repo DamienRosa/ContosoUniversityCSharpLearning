@@ -21,6 +21,10 @@ namespace ContosoUniversity.Models
         [Display(Name = "Start Date")]
         public DateTime StartDate { get; set; }
 
+        [Timestamp]
+        public byte[] RowVersion { get; set; }
+
+        [Display(Name = "Administrator")]
         public int? InstructorID { get; set; }
 
         public virtual Instructor Administrator { get; set; }
