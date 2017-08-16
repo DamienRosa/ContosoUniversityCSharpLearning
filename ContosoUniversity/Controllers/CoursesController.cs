@@ -77,7 +77,7 @@ namespace ContosoUniversity.Controllers
             var departmentQuery = from d in db.Departments
                                   orderby d.Name
                                   select d;
-                                
+
             ViewBag.DepartmentID = new SelectList(departmentQuery, "DepartmentID", "Name", selectedDepartment);
 
         }
@@ -155,6 +155,22 @@ namespace ContosoUniversity.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+
+        public ActionResult UpdateCourseCredits()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult UpdateCourseCredits(int? multiplier)
+        {
+            if (multiplier != 0)
+            {
+                ViewBag.RowsAffected = db.Database.ExecuteSqlCommand("UPDATE Course SET Credits = Credits * {0}", multiplier);
+            }
+            return View();
         }
     }
 }
